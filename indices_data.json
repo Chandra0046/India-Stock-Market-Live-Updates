@@ -1,0 +1,9 @@
+import json
+
+def save_data_to_file(data, filename="indices_data.json"):
+    with open(filename, "w") as file:
+        json.dump(data, file, indent=4)
+
+indices_data = fetch_indices()
+if indices_data:
+    save_data_to_file(indices_data)
